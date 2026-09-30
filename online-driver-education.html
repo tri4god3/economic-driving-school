@@ -543,6 +543,31 @@ address { font-style: normal; }
   .next-step .btn { width: 100%; }
 }
 
+/* ---------- Mature Driver page ---------- */
+.price-card__price--sm { font-size: 64px; }
+.topics {
+  list-style: none; margin: 0; padding: 40px 48px;
+  background: var(--grey-100); border-radius: var(--radius-lg);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 48px;
+  font-size: 18px; font-weight: 600;
+}
+.topics li { display: flex; align-items: center; gap: 14px; }
+.topics li::before {
+  content: ""; width: 22px; height: 22px; flex-shrink: 0; background: var(--red);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.section--grey .feature { background: var(--white); border-color: transparent; }
+.section--grey .feature--dark { background: var(--black); }
+.feature--dark .feature__title { color: var(--white); }
+.feature--dark .feature__icon { background: var(--red); }
+.feature--dark p a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.feature--dark p a:hover { color: var(--grey-300); }
+@media (max-width: 640px) {
+  .price-card__price--sm { font-size: 52px; }
+  .topics { grid-template-columns: minmax(0, 1fr); padding: 24px; gap: 14px; font-size: 16px; border-radius: 16px; }
+}
+
 </style>
 </head>
 <body>
@@ -580,7 +605,7 @@ address { font-style: normal; }
       <nav class="nav" id="site-nav" aria-label="Main">
         <a href="online-driver-education.html" aria-current="page">Online Driver Ed</a>
         <a href="https://www.economicdrivingschool.com/driver-training/">Behind the Wheel</a>
-        <a href="https://www.economicdrivingschool.com/mature-driver-course/">Mature Drivers</a>
+        <a href="mature-driver-course.html">Mature Drivers</a>
         <a href="https://www.economicdrivingschool.com/practice-written-tests/">Practice Tests</a>
         <a href="https://www.economicdrivingschool.com/faq/">FAQ</a>
         <a href="https://www.economicdrivingschool.com/contact-us/">Contact</a>
@@ -797,7 +822,7 @@ address { font-style: normal; }
           <h2 class="footer__heading">Programs</h2>
           <a href="online-driver-education.html">Online Driver Education</a>
           <a href="https://www.economicdrivingschool.com/driver-training/">Behind-the-Wheel Training</a>
-          <a href="https://www.economicdrivingschool.com/mature-driver-course/">Mature Driver Course</a>
+          <a href="mature-driver-course.html">Mature Driver Course</a>
           <a href="http://comedyschoolonline.com/referrals.php?refid=MjEw">Online Traffic School</a>
         </div>
         <div class="footer__col">
