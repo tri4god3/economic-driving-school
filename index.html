@@ -568,6 +568,47 @@ address { font-style: normal; }
   .topics { grid-template-columns: minmax(0, 1fr); padding: 24px; gap: 14px; font-size: 16px; border-radius: 16px; }
 }
 
+/* ---------- Practice Tests page ---------- */
+.test-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.test-list li:first-child { grid-column: 1 / -1; }
+.test {
+  display: flex; align-items: center; gap: 20px; height: 100%;
+  padding: 28px 32px; border: 1px solid var(--grey-150); border-radius: 16px;
+  color: var(--black); transition: border-color .15s, box-shadow .15s;
+}
+.test:hover { color: var(--black); border-color: var(--black); box-shadow: 0 6px 20px rgba(14, 14, 16, .08); }
+.test--featured { background: var(--black); border-color: var(--black); color: var(--white); padding: 36px 40px; }
+.test--featured:hover { color: var(--white); box-shadow: 0 10px 28px rgba(14, 14, 16, .25); }
+.test--featured .test__body span { color: var(--grey-300); }
+.test--featured .test__body strong { font-size: 26px; }
+.test__tag {
+  flex-shrink: 0; font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--white); background: var(--red); padding: 6px 12px; border-radius: 6px;
+}
+.test__tag--grey { background: var(--grey-700); }
+.test__body { flex: 1; display: flex; flex-direction: column; gap: 4px; line-height: 1.45; }
+.test__body strong { font-size: 21px; }
+.test__body span { font-size: 16px; color: var(--grey-700); }
+.test__arrow { font-size: 24px; color: var(--red); transition: transform .15s; }
+.test:hover .test__arrow { transform: translate(3px, -3px); }
+.test--featured .test__arrow { color: var(--white); }
+.resources--white .resource { background: var(--white); }
+.resources--white .resource:hover { background: var(--grey-150); }
+@media (max-width: 1024px) {
+  .test-list { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .test, .test--featured { padding: 22px; gap: 14px; flex-wrap: wrap; }
+  .test__body { flex-basis: 100%; order: 2; }
+  .test__tag { order: 1; }
+  .test__arrow { position: absolute; }
+  .test { position: relative; }
+  .test__arrow { top: 20px; right: 22px; }
+  .test__body { padding-right: 28px; }
+  .test--featured .test__body strong { font-size: 22px; }
+  .test__body strong { font-size: 19px; }
+}
+
 </style>
 </head>
 <body>
@@ -606,7 +647,7 @@ address { font-style: normal; }
         <a href="https://tri4god3.github.io/economic-driving-school/online-driver-education.html">Online Driver Ed</a>
         <a href="https://www.economicdrivingschool.com/driver-training/">Behind the Wheel</a>
         <a href="https://tri4god3.github.io/economic-driving-school/mature-driver-course.html">Mature Drivers</a>
-        <a href="https://www.economicdrivingschool.com/practice-written-tests/">Practice Tests</a>
+        <a href="practice-written-tests.html">Practice Tests</a>
         <a href="https://www.economicdrivingschool.com/faq/">FAQ</a>
         <a href="https://www.economicdrivingschool.com/contact-us/">Contact</a>
         <a class="nav__mobile-only" href="https://course.economicdrivingschool.com/course/candidate_login.php">Student Login</a>
@@ -800,7 +841,7 @@ address { font-style: normal; }
             <span class="program__body"><strong>Online Traffic School</strong><span>DMV-licensed internet and booklet courses to clear a ticket.</span></span>
             <svg class="program__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
           </a>
-          <a class="program" href="https://www.economicdrivingschool.com/practice-written-tests/">
+          <a class="program" href="practice-written-tests.html">
             <span class="program__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 12 2 2 4-4"/></svg></span>
             <span class="program__body"><strong>Practice Written Tests</strong><span>Sharpen up before your DMV knowledge test.</span></span>
             <svg class="program__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
