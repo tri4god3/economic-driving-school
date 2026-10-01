@@ -814,6 +814,40 @@ section[id] { scroll-margin-top: 96px; }
   .mail-to__address { font-size: 24px; }
 }
 
+/* ---------- About page ---------- */
+.about-split { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+.about-split__copy { display: flex; flex-direction: column; gap: 18px; }
+.about-split__copy .eyebrow { margin-bottom: -4px; }
+.about-text { font-size: 18px; color: var(--grey-700); }
+.values { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.value { border: 1px solid var(--grey-150); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.value:first-child { background: var(--black); border-color: var(--black); }
+.value:first-child .feature__icon { background: var(--red); }
+.value:first-child .value__title { color: var(--white); }
+.value__title { font-size: 19px; font-weight: 700; line-height: 1.3; }
+.resources--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.section-head__lead--center { margin: 16px auto 0; max-width: 620px; }
+.partners { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.partners li {
+  border: 1px solid var(--grey-150); border-radius: 14px; padding: 24px; text-align: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 22px; text-transform: uppercase; line-height: 1.15;
+  display: flex; align-items: center; justify-content: center; min-height: 96px;
+}
+@media (max-width: 1024px) {
+  .about-split { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .partners { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .about-text { font-size: 16px; }
+  .values { gap: 12px; }
+  .value { padding: 18px; gap: 10px; }
+  .value__title { font-size: 16px; }
+  .partners { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .resources--four { grid-template-columns: minmax(0, 1fr); }
+  .partners li { min-height: 0; padding: 18px; font-size: 19px; }
+  .section-head__lead--center { margin-left: 0; }
+}
+
 </style>
 </head>
 <body>
@@ -1073,7 +1107,7 @@ section[id] { scroll-margin-top: 96px; }
         </div>
         <div class="footer__col">
           <h2 class="footer__heading">School</h2>
-          <a href="https://www.economicdrivingschool.com/about/">About Us</a>
+          <a href="about.html">About Us</a>
           <a href="contact-us.html">Contact Us</a>
         </div>
         <div class="footer__col">
