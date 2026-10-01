@@ -750,6 +750,70 @@ address { font-style: normal; }
   .closing-note { font-size: 16px; }
 }
 
+/* ---------- Instructors ---------- */
+section[id] { scroll-margin-top: 96px; }
+.instructors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.instructor { border: 1px solid var(--grey-150); border-radius: var(--radius-lg); padding: 28px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.instructor__head { display: flex; align-items: center; gap: 16px; }
+.instructor__avatar {
+  width: 56px; height: 56px; flex-shrink: 0; border-radius: 50%; background: var(--black); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: .5px;
+}
+.instructor:first-child .instructor__avatar { background: var(--red); }
+.instructor__name { font-size: 22px; font-weight: 700; line-height: 1.2; }
+.instructor__note { font-size: 15px; color: var(--grey-700); }
+.instructor__areas { font-size: 16px; color: var(--grey-700); }
+.instructor__areas strong { color: var(--black); }
+.instructor__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+.instructor__actions .btn { padding: 0 18px; }
+.instructor__license { font-size: 13px; color: var(--grey-700); letter-spacing: .5px; }
+.book-online {
+  margin-top: 24px; background: var(--black); color: var(--grey-300); border-radius: var(--radius-lg);
+  padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; gap: 24px;
+}
+.book-online__title { color: var(--white); font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+@media (max-width: 1024px) {
+  .instructors { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .instructor { padding: 22px; border-radius: 16px; }
+  .instructor__actions .btn { flex: 1 1 auto; }
+  .book-online { flex-direction: column; align-items: stretch; padding: 24px; border-radius: 16px; }
+  .book-online .btn { width: 100%; }
+}
+
+/* ---------- Lost Completion Forms page ---------- */
+.cert-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.cert { border: 1px solid var(--grey-150); border-radius: var(--radius-lg); padding: 32px; display: flex; flex-direction: column; gap: 22px; }
+.cert__head { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.cert__title { font-family: var(--font-display); font-weight: 800; font-size: 36px; line-height: 1; text-transform: uppercase; margin-top: 6px; }
+.cert__sub { color: var(--grey-700); font-size: 16px; }
+.checklist--dark { color: var(--black); font-size: 17px; }
+.mail-to {
+  margin-top: 24px; background: var(--black); color: var(--grey-300); border-radius: var(--radius-lg);
+  padding: 32px 36px; display: grid; grid-template-columns: auto 1fr minmax(0, 340px); gap: 28px; align-items: center;
+}
+.mail-to__icon { width: 56px; height: 56px; border-radius: 50%; background: var(--red); color: var(--white); display: flex; align-items: center; justify-content: center; }
+.mail-to__icon svg { width: 26px; height: 26px; }
+.mail-to__label { font-size: 14px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--grey-400); margin-bottom: 8px; }
+.mail-to__address { font-style: normal; color: var(--white); font-family: var(--font-display); font-weight: 800; font-size: 28px; line-height: 1.15; }
+.mail-to__note { font-size: 16px; }
+.mail-to__note strong { color: var(--white); }
+@media (max-width: 1024px) {
+  .cert-grid { grid-template-columns: minmax(0, 1fr); }
+  .mail-to { grid-template-columns: auto 1fr; }
+  .mail-to__note { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .cert { padding: 22px; border-radius: 16px; gap: 16px; }
+  .cert__title { font-size: 30px; }
+  .checklist--dark { font-size: 16px; }
+  .mail-to { grid-template-columns: minmax(0, 1fr); padding: 24px; border-radius: 16px; gap: 16px; }
+  .mail-to__icon { display: none; }
+  .mail-to__address { font-size: 24px; }
+}
+
 </style>
 </head>
 <body>
@@ -786,7 +850,7 @@ address { font-style: normal; }
 
       <nav class="nav" id="site-nav" aria-label="Main">
         <a href="online-driver-education.html">Online Driver Ed</a>
-        <a href="https://www.economicdrivingschool.com/driver-training/">Behind the Wheel</a>
+        <a href="behind-the-wheel.html">Behind the Wheel</a>
         <a href="mature-driver-course.html">Mature Drivers</a>
         <a href="practice-written-tests.html">Practice Tests</a>
         <a href="faq.html" aria-current="page">FAQ</a>
@@ -940,15 +1004,13 @@ address { font-style: normal; }
         <div class="footer__col">
           <h2 class="footer__heading">Programs</h2>
           <a href="online-driver-education.html">Online Driver Education</a>
-          <a href="https://www.economicdrivingschool.com/driver-training/">Behind-the-Wheel Training</a>
+          <a href="behind-the-wheel.html">Behind-the-Wheel Training</a>
           <a href="mature-driver-course.html">Mature Driver Course</a>
           <a href="http://comedyschoolonline.com/referrals.php?refid=MjEw">Online Traffic School</a>
         </div>
         <div class="footer__col">
           <h2 class="footer__heading">School</h2>
           <a href="https://www.economicdrivingschool.com/about/">About Us</a>
-          <a href="https://www.economicdrivingschool.com/testimonials/">Testimonials</a>
-          <a href="https://www.economicdrivingschool.com/blog/">Blog</a>
           <a href="contact-us.html">Contact Us</a>
         </div>
         <div class="footer__col">
@@ -956,10 +1018,6 @@ address { font-style: normal; }
           <address>771 Sunset Glen Drive<br>San Jose, CA 95123</address>
           <a class="footer__phone" href="tel:+14089721168">(408) 972-1168</a>
           <a href="mailto:information@economicdrivingschool.com">information@economicdrivingschool.com</a>
-          <div class="footer__social">
-            <a href="https://www.facebook.com/Economicdrivingschooll/">Facebook</a>
-            <a href="https://www.instagram.com/economicdrivingschool/">Instagram</a>
-          </div>
         </div>
       </div>
       <div class="footer__bottom">

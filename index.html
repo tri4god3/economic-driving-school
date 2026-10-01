@@ -830,6 +830,37 @@ section[id] { scroll-margin-top: 96px; }
   .hero__media .hero__badge-text span { font-size: 14px; }
 }
 
+/* ---------- Lost Completion Forms page ---------- */
+.cert-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.cert { border: 1px solid var(--grey-150); border-radius: var(--radius-lg); padding: 32px; display: flex; flex-direction: column; gap: 22px; }
+.cert__head { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.cert__title { font-family: var(--font-display); font-weight: 800; font-size: 36px; line-height: 1; text-transform: uppercase; margin-top: 6px; }
+.cert__sub { color: var(--grey-700); font-size: 16px; }
+.checklist--dark { color: var(--black); font-size: 17px; }
+.mail-to {
+  margin-top: 24px; background: var(--black); color: var(--grey-300); border-radius: var(--radius-lg);
+  padding: 32px 36px; display: grid; grid-template-columns: auto 1fr minmax(0, 340px); gap: 28px; align-items: center;
+}
+.mail-to__icon { width: 56px; height: 56px; border-radius: 50%; background: var(--red); color: var(--white); display: flex; align-items: center; justify-content: center; }
+.mail-to__icon svg { width: 26px; height: 26px; }
+.mail-to__label { font-size: 14px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--grey-400); margin-bottom: 8px; }
+.mail-to__address { font-style: normal; color: var(--white); font-family: var(--font-display); font-weight: 800; font-size: 28px; line-height: 1.15; }
+.mail-to__note { font-size: 16px; }
+.mail-to__note strong { color: var(--white); }
+@media (max-width: 1024px) {
+  .cert-grid { grid-template-columns: minmax(0, 1fr); }
+  .mail-to { grid-template-columns: auto 1fr; }
+  .mail-to__note { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .cert { padding: 22px; border-radius: 16px; gap: 16px; }
+  .cert__title { font-size: 30px; }
+  .checklist--dark { font-size: 16px; }
+  .mail-to { grid-template-columns: minmax(0, 1fr); padding: 24px; border-radius: 16px; gap: 16px; }
+  .mail-to__icon { display: none; }
+  .mail-to__address { font-size: 24px; }
+}
+
 </style>
 </head>
 <body>
@@ -866,7 +897,7 @@ section[id] { scroll-margin-top: 96px; }
 
       <nav class="nav" id="site-nav" aria-label="Main">
         <a href="https://tri4god3.github.io/economic-driving-school/online-driver-education.html">Online Driver Ed</a>
-        <a href="driver-training.html">Behind the Wheel</a>
+        <a href="behind-the-wheel.html">Behind the Wheel</a>
         <a href="https://tri4god3.github.io/economic-driving-school/mature-driver-course.html">Mature Drivers</a>
         <a href="practice-written-tests.html">Practice Tests</a>
         <a href="faq.html">FAQ</a>
@@ -901,7 +932,7 @@ section[id] { scroll-margin-top: 96px; }
               Start Online Driver Ed
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
             </a>
-            <a class="btn btn--outline-light btn--lg" href="driver-training.html#instructors">Book Behind-the-Wheel</a>
+            <a class="btn btn--outline-light btn--lg" href="behind-the-wheel.html#instructors">Book Behind-the-Wheel</a>
           </div>
         </div>
 
@@ -998,8 +1029,8 @@ section[id] { scroll-margin-top: 96px; }
               <li>Automatic-transmission, dual-control vehicles</li>
             </ul>
             <div class="btn-row">
-              <a class="btn btn--black" href="driver-training.html#instructors">Book Lessons</a>
-              <a class="btn btn--outline-light-grey" href="driver-training.html">Learn More</a>
+              <a class="btn btn--black" href="behind-the-wheel.html#instructors">Book Lessons</a>
+              <a class="btn btn--outline-light-grey" href="behind-the-wheel.html">Learn More</a>
             </div>
           </article>
         </div>
@@ -1081,7 +1112,7 @@ section[id] { scroll-margin-top: 96px; }
         <div class="resources">
           <a class="resource" href="permit-req.html">Permit Requirements<span aria-hidden="true">→</span></a>
           <a class="resource" href="license-req.html">License Requirements<span aria-hidden="true">→</span></a>
-          <a class="resource" href="https://www.economicdrivingschool.com/certificatesloss-issued/">Lost Completion Forms<span aria-hidden="true">→</span></a>
+          <a class="resource" href="lost-completion-forms.html">Lost Completion Forms<span aria-hidden="true">→</span></a>
           <a class="resource" href="faq.html">FAQ<span aria-hidden="true">→</span></a>
           <a class="resource" href="https://www.dmv.ca.gov/portal/">California DMV Website<span aria-hidden="true">↗</span></a>
           <a class="resource" href="https://www.yelp.com/biz/economic-driving-school-san-jose">Read Our Yelp Reviews<span aria-hidden="true">↗</span></a>
@@ -1119,7 +1150,7 @@ section[id] { scroll-margin-top: 96px; }
         <div class="footer__col">
           <h2 class="footer__heading">Programs</h2>
           <a href="https://tri4god3.github.io/economic-driving-school/">Online Driver Education</a>
-          <a href="driver-training.html">Behind-the-Wheel Training</a>
+          <a href="behind-the-wheel.html">Behind-the-Wheel Training</a>
           <a href="https://tri4god3.github.io/economic-driving-school/mature-driver-course.html">Mature Driver Course</a>
           <a href="http://comedyschoolonline.com/referrals.php?refid=MjEw">Online Traffic School</a>
         </div>
