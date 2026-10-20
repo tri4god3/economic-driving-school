@@ -888,6 +888,16 @@ section[id] { scroll-margin-top: 96px; }
 .value:first-child .feature__icon { color: var(--black); }
 .cta .btn--outline-light { border-color: var(--black); color: var(--black); }
 .cta .btn--outline-light:hover { background: var(--black); color: var(--white); }
+
+/* ---------- Light-blue backgrounds ---------- */
+:root { --grey-100: #E3ECFA; --grey-150: #CFDCF2; --page-bg: #EEF4FD; --band-bg: #DCE7F9; }
+body { background: var(--page-bg); }
+.section--grey, .trust { background: var(--band-bg); }
+.trust { border-bottom-color: var(--grey-150); }
+.program, .feature:not(.feature--dark), .test:not(.test--featured),
+.contact-card:not(.contact-card--dark), .req, .instructor, .cert, .value, .partners li { background: var(--white); }
+.stat, .resource, .faq summary::after { background: var(--page-bg); }
+.resource:hover, .faq summary:hover::after { background: var(--grey-100); }
 </style>
 </head>
 <body>
