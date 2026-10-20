@@ -864,13 +864,14 @@ section[id] { scroll-margin-top: 96px; }
 .cta .btn--outline-light:hover { background: var(--black); color: var(--white); }
 
 /* ---------- Light-blue backgrounds ---------- */
-:root { --grey-100: #E3ECFA; --grey-150: #CFDCF2; --page-bg: #EEF4FD; --band-bg: #DCE7F9; }
+:root { --grey-100: #E3ECFA; --grey-150: #C3D4F0; --grey-700: #4F5560; --page-bg: #D0DEF6; --band-bg: #D0DEF6; }
 body { background: var(--page-bg); }
 .section--grey, .trust { background: var(--band-bg); }
-.trust { border-bottom-color: var(--grey-150); }
+.trust { border-bottom-color: transparent; }
 .program, .feature:not(.feature--dark), .test:not(.test--featured),
 .contact-card:not(.contact-card--dark), .req, .instructor, .cert, .value, .partners li { background: var(--white); }
-.stat, .resource, .faq summary::after { background: var(--page-bg); }
+.stat, .faq summary::after { background: var(--grey-100); }
+.resource { background: var(--white); }
 .resource:hover, .faq summary:hover::after { background: var(--grey-100); }
 </style>
 </head>
