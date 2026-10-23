@@ -463,3 +463,10 @@ body { background: var(--page-bg); }
 .stat, .faq summary::after { background: var(--grey-100); }
 .resource { background: var(--white); }
 .resource:hover, .faq summary:hover::after { background: var(--grey-100); }
+
+/* ---------- Header fit (menu includes Online Traffic School) ---------- */
+.header__inner { max-width: 1440px; }
+.logo { flex-shrink: 0; }
+.logo__sub { white-space: nowrap; }
+@media (max-width: 1720px) { .header__login { display: none; } }
+@media (max-width: 1440px) and (min-width: 1281px) { .nav { gap: 22px; font-size: 15px; } }
