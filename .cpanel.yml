@@ -1,0 +1,36 @@
+---
+# cPanel deployment: copies ONLY the new site's files into public_html.
+# Nothing else in public_html (WordPress, the course system, etc.) is touched or deleted.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/cp -f index.html $DEPLOYPATH
+    - /bin/cp -f about.html $DEPLOYPATH
+    - /bin/cp -f behind-the-wheel.html $DEPLOYPATH
+    - /bin/cp -f contact-us.html $DEPLOYPATH
+    - /bin/cp -f faq.html $DEPLOYPATH
+    - /bin/cp -f license-req.html $DEPLOYPATH
+    - /bin/cp -f lost-completion-forms.html $DEPLOYPATH
+    - /bin/cp -f mature-driver-course.html $DEPLOYPATH
+    - /bin/cp -f online-driver-education.html $DEPLOYPATH
+    - /bin/cp -f permit-req.html $DEPLOYPATH
+    - /bin/cp -f practice-written-tests.html $DEPLOYPATH
+    - /bin/cp -f 404.html $DEPLOYPATH
+    - /bin/cp -f styles.css $DEPLOYPATH
+    - /bin/cp -Rf media $DEPLOYPATH
+    - /bin/cp -Rf about $DEPLOYPATH
+    - /bin/cp -Rf behind-wheel $DEPLOYPATH
+    - /bin/cp -Rf blog $DEPLOYPATH
+    - /bin/cp -Rf certificatesloss-issued $DEPLOYPATH
+    - /bin/cp -Rf contact-us $DEPLOYPATH
+    - /bin/cp -Rf driver-training $DEPLOYPATH
+    - /bin/cp -Rf faq $DEPLOYPATH
+    - /bin/cp -Rf home $DEPLOYPATH
+    - /bin/cp -Rf license-req $DEPLOYPATH
+    - /bin/cp -Rf mature-driver-course $DEPLOYPATH
+    - /bin/cp -Rf online-driver-education $DEPLOYPATH
+    - /bin/cp -Rf payment $DEPLOYPATH
+    - /bin/cp -Rf permit-req $DEPLOYPATH
+    - /bin/cp -Rf practice-written-tests $DEPLOYPATH
+    - /bin/cp -Rf register $DEPLOYPATH
+    - /bin/cp -Rf testimonials $DEPLOYPATH
