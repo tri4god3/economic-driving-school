@@ -851,7 +851,9 @@ body { background: var(--page-bg); }
 @media (max-width: 1880px) { .header__login { display: none; } }
 @media (max-width: 1440px) and (min-width: 1281px) { .nav { gap: 16px; font-size: 14.5px; } }
 @media (max-width: 1500px) and (min-width: 1441px) { .nav { gap: 22px; } }
-@media (max-width: 360px) { .contact-card__value--email { font-size: 16px; } }
+/* Keep the whole email address on one line in its card */
+.contact-card:has(.contact-card__value--email) { container-type: inline-size; }
+.contact-card .contact-card__value--email { font-size: min(19px, 4.8cqi); }
 </style>
 </head>
 <body>
