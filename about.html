@@ -932,6 +932,21 @@ body { background: var(--page-bg); }
 .stars svg { width: 22px; height: 22px; }
 @media (max-width: 1024px) { .reviews-card { flex-basis: auto; } }
 @media (max-width: 640px) { .reviews-card { padding: 22px 18px 18px; } .review-row__num { font-size: 28px; } .stars svg { width: 18px; height: 18px; } }
+
+/* ---------- Our story ---------- */
+.section--story { padding-bottom: 32px; }
+.story { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+.story__copy { display: flex; flex-direction: column; gap: 18px; }
+.story__copy .h2 { margin-bottom: 6px; }
+.story__copy .eyebrow { margin-bottom: 0; }
+.story__tagline { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.2; text-transform: uppercase;
+  color: var(--black); padding-bottom: 10px; border-bottom: 4px solid var(--red); align-self: flex-start; margin-top: 8px; }
+.story__photo { margin: 0; background: var(--white); border-radius: var(--radius-lg); padding: 12px 12px 0; box-shadow: 0 10px 30px rgba(10,36,99,.12);
+  border-bottom: 8px solid var(--red); }
+.story__photo img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.story__photo figcaption { font-size: 14px; font-weight: 600; color: var(--grey-700); text-align: center; padding: 12px 0 14px; }
+@media (max-width: 1024px) { .story { grid-template-columns: minmax(0, 1fr); gap: 40px; } .story__photo { max-width: 620px; } }
+@media (max-width: 640px) { .story__tagline { font-size: 22px; } }
 </style>
 </head>
 <body>
@@ -1004,7 +1019,6 @@ body { background: var(--page-bg); }
           </nav>
           <p class="eyebrow eyebrow--light"><span class="eyebrow__bar" aria-hidden="true"></span>Established 1978</p>
           <h1 class="page-hero__title">About <span class="text-red">Us</span></h1>
-          <p class="hero__lead">Since 1978, Economic Driving School has built a reputation as a leader in Driver Education, with exceptional training at competitive rates.</p>
         </div>
         <aside class="reviews-card" aria-label="Customer reviews">
           <p class="reviews-card__label">What families say</p>
@@ -1034,6 +1048,25 @@ body { background: var(--page-bg); }
         <div class="fact"><span class="fact__num">200,000+</span><span class="fact__label">Californians helped to get their license</span></div>
         <div class="fact"><span class="fact__num">#2430</span><span class="fact__label">California DMV license</span></div>
         <div class="fact"><span class="fact__num">San Jose</span><span class="fact__label">Proudly local</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Our story ===== -->
+    <section class="section section--story" aria-labelledby="story-title">
+      <div class="container story">
+        <div class="story__copy">
+          <p class="eyebrow"><span class="eyebrow__bar" aria-hidden="true"></span>Our story</p>
+          <h2 class="h2" id="story-title">Teaching San Jose to drive since 1978</h2>
+          <p class="about-text">Economic Driving School started in 1978 with a simple goal: give new drivers great training at a fair price. Forty-eight years later, that goal hasn&rsquo;t changed, and neither has the family behind it.</p>
+          <p class="about-text">Founded and still run by Donald Meyer, we&rsquo;ve helped more than 200,000 Californians earn their permits and licenses.</p>
+          <p class="about-text">We started with classroom Driver Education. Today students can also take our DMV-approved course online, at their own pace on any device, then build real-road skills one-on-one with our licensed instructors, including credentialed Special Education teachers.</p>
+          <p class="about-text">We&rsquo;re a local business, and we give back like one: 40% of every registration made with a school code goes back to local schools and community centers.</p>
+          <p class="story__tagline">Family owned. San Jose proud. 48 years and counting.</p>
+        </div>
+        <figure class="story__photo">
+          <img src="media/meyer-family.jpg" alt="The Meyer family, owners of Economic Driving School" width="1100" height="867" loading="lazy">
+          <figcaption>The Meyer family</figcaption>
+        </figure>
       </div>
     </section>
 
