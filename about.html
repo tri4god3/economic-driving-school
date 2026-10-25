@@ -907,6 +907,30 @@ body { background: var(--page-bg); }
 @media (max-width: 1880px) { .header__login { display: none; } }
 @media (max-width: 1440px) and (min-width: 1281px) { .nav { gap: 16px; font-size: 14.5px; } }
 @media (max-width: 1500px) and (min-width: 1441px) { .nav { gap: 22px; } }
+
+/* ---------- Reviews snapshot (About hero) ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.reviews-card { flex: 0 0 420px; background: var(--white); border-radius: var(--radius-lg); border-top: 8px solid var(--red);
+  padding: 28px 28px 22px; display: flex; flex-direction: column; gap: 12px; }
+.reviews-card__label { font-size: 14px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--grey-700); margin-bottom: 4px; }
+.review-row { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "source arrow" "score count";
+  align-items: center; gap: 6px 12px; padding: 16px 18px; border: 2px solid var(--grey-150); border-radius: var(--radius-md);
+  color: var(--black); transition: border-color .15s, background-color .15s; }
+.review-row:hover { border-color: var(--blue); background: var(--grey-100); color: var(--black); }
+.review-row__source { grid-area: source; font-family: var(--font-display); font-weight: 800; font-size: 22px; text-transform: uppercase; letter-spacing: .5px; }
+.review-row__arrow { grid-area: arrow; justify-self: end; color: var(--blue); font-size: 20px; font-weight: 700; }
+.review-row__score { grid-area: score; display: flex; align-items: center; gap: 10px; }
+.review-row__num { font-family: var(--font-display); font-weight: 800; font-size: 34px; line-height: 1; color: var(--black); }
+.review-row__count { grid-area: count; font-size: 15px; font-weight: 600; color: var(--grey-700); white-space: nowrap; }
+.reviews-card__note { font-size: 13px; color: var(--grey-700); text-align: right; }
+.stars { position: relative; display: inline-block; line-height: 0; }
+.stars__base, .stars__fill { display: flex; gap: 2px; }
+.stars__base svg { fill: #C3D4F0; }
+.stars__fill { position: absolute; top: 0; left: 0; overflow: hidden; }
+.stars__fill svg { fill: #F5B800; flex-shrink: 0; }
+.stars svg { width: 22px; height: 22px; }
+@media (max-width: 1024px) { .reviews-card { flex-basis: auto; } }
+@media (max-width: 640px) { .reviews-card { padding: 22px 18px 18px; } .review-row__num { font-size: 28px; } .stars svg { width: 18px; height: 18px; } }
 </style>
 </head>
 <body>
@@ -981,6 +1005,24 @@ body { background: var(--page-bg); }
           <h1 class="page-hero__title">About <span class="text-red">Us</span></h1>
           <p class="hero__lead">Since 1978, Economic Driving School has built a reputation as a leader in Driver Education, with exceptional training at competitive rates.</p>
         </div>
+        <aside class="reviews-card" aria-label="Customer reviews">
+          <p class="reviews-card__label">What families say</p>
+          <a class="review-row" href="https://www.google.com/maps/place/?q=place_id:ChIJy8OUKBAxjoARg9V0BIQ25QE" target="_blank" rel="noopener">
+            <span class="review-row__source">Google</span>
+            <span class="review-row__score"><span class="review-row__num">5.0</span><span class="stars" aria-hidden="true"><span class="stars__base"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="stars__fill" style="width:100%"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span></span></span>
+            <span class="review-row__count">57 reviews</span>
+            <span class="review-row__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">5.0 out of 5 stars on Google from 57 reviews (opens in a new tab)</span>
+          </a>
+          <a class="review-row" href="https://www.yelp.com/biz/economic-driving-school-san-jose" target="_blank" rel="noopener">
+            <span class="review-row__source">Yelp</span>
+            <span class="review-row__score"><span class="review-row__num">YELP_RATING</span><span class="stars" aria-hidden="true"><span class="stars__base"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="stars__fill" style="width:YELP_PCT%"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span></span></span>
+            <span class="review-row__count">120 reviews</span>
+            <span class="review-row__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">YELP_RATING out of 5 stars on Yelp from 120 reviews (opens in a new tab)</span>
+          </a>
+          <p class="reviews-card__note">Ratings as of October 2026</p>
+        </aside>
       </div>
     </section>
 
