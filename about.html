@@ -933,20 +933,24 @@ body { background: var(--page-bg); }
 @media (max-width: 1024px) { .reviews-card { flex-basis: auto; } }
 @media (max-width: 640px) { .reviews-card { padding: 22px 18px 18px; } .review-row__num { font-size: 28px; } .stars svg { width: 18px; height: 18px; } }
 
-/* ---------- Our story ---------- */
-.section--story { padding-bottom: 32px; }
-.story { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 64px; align-items: center; }
-.story__copy { display: flex; flex-direction: column; gap: 18px; }
-.story__copy .h2 { margin-bottom: 6px; }
-.story__copy .eyebrow { margin-bottom: 0; }
-.story__tagline { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.2; text-transform: uppercase;
-  color: var(--black); padding-bottom: 10px; border-bottom: 4px solid var(--red); align-self: flex-start; margin-top: 8px; }
-.story__photo { margin: 0; background: var(--white); border-radius: var(--radius-lg); padding: 12px 12px 0; box-shadow: 0 10px 30px rgba(10,36,99,.12);
-  border-bottom: 8px solid var(--red); }
-.story__photo img { display: block; width: 100%; height: auto; border-radius: 12px; }
-.story__photo figcaption { font-size: 14px; font-weight: 600; color: var(--grey-700); text-align: center; padding: 12px 0 14px; }
-@media (max-width: 1024px) { .story { grid-template-columns: minmax(0, 1fr); gap: 40px; } .story__photo { max-width: 620px; } }
-@media (max-width: 640px) { .story__tagline { font-size: 22px; } }
+/* ---------- About hero: story, compact reviews, photo ---------- */
+.page-hero .page-hero__copy .hero__lead { max-width: 600px; }
+.hero__tagline { font-family: var(--font-display); font-weight: 800; font-size: 24px; line-height: 1.2; text-transform: uppercase;
+  color: var(--red); letter-spacing: .5px; }
+.about-hero__side { flex: 0 0 380px; display: flex; flex-direction: column; gap: 16px; }
+.about-hero__side .reviews-card { flex: none; padding: 20px 20px 14px; gap: 10px; border-top-width: 6px; }
+.about-hero__side .reviews-card__label { font-size: 12px; margin-bottom: 0; }
+.about-hero__side .review-row { padding: 12px 14px; gap: 4px 10px; }
+.about-hero__side .review-row__source img { height: 24px; }
+.about-hero__side .review-row__num { font-size: 26px; }
+.about-hero__side .review-row__count { font-size: 14px; }
+.about-hero__side .stars svg { width: 17px; height: 17px; }
+.about-hero__side .reviews-card__note { font-size: 12px; }
+.hero-photo { margin: 0; background: var(--white); border-radius: var(--radius-lg); padding: 8px 8px 0; border-bottom: 6px solid var(--red); }
+.hero-photo img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.hero-photo figcaption { font-size: 13px; font-weight: 600; color: var(--grey-700); text-align: center; padding: 8px 0 10px; }
+@media (max-width: 1024px) { .about-hero__side { flex-basis: auto; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: start; } }
+@media (max-width: 640px) { .about-hero__side { grid-template-columns: minmax(0,1fr); } .hero__tagline { font-size: 20px; } }
 </style>
 </head>
 <body>
@@ -1019,25 +1023,34 @@ body { background: var(--page-bg); }
           </nav>
           <p class="eyebrow eyebrow--light"><span class="eyebrow__bar" aria-hidden="true"></span>Established 1978</p>
           <h1 class="page-hero__title">About <span class="text-red">Us</span></h1>
+          <p class="hero__lead">Founded in 1978 by Donald Meyer and still family run, we&rsquo;ve helped more than 200,000 Californians earn their permits and licenses.</p>
+          <p class="hero__lead">Students take our DMV-approved course online at their own pace, then build real-road skills one-on-one with our licensed instructors. And 40% of every registration made with a school code goes back to local schools and community centers.</p>
+          <p class="hero__tagline">Family owned. San Jose proud. 48 years and counting.</p>
         </div>
-        <aside class="reviews-card" aria-label="Customer reviews">
-          <p class="reviews-card__label">What families say</p>
-          <a class="review-row" href="https://www.google.com/maps/place/?q=place_id:ChIJy8OUKBAxjoARg9V0BIQ25QE" target="_blank" rel="noopener">
-            <span class="review-row__source"><img src="media/google-logo.png" alt="Google" width="194" height="64"></span>
-            <span class="review-row__score"><span class="review-row__num">5.0</span><span class="stars" aria-hidden="true"><span class="stars__base"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="stars__fill" style="width:100%"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span></span></span>
-            <span class="review-row__count">57 reviews</span>
-            <span class="review-row__arrow" aria-hidden="true">&rarr;</span>
-            <span class="sr-only">5.0 out of 5 stars on Google from 57 reviews (opens in a new tab)</span>
-          </a>
-          <a class="review-row" href="https://www.yelp.com/biz/economic-driving-school-san-jose" target="_blank" rel="noopener">
-            <span class="review-row__source"><img src="media/yelp-logo.png" alt="Yelp" width="170" height="64"></span>
-            <span class="review-row__score"><span class="review-row__num">4.8</span><span class="stars" aria-hidden="true"><span class="stars__base"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="stars__fill" style="width:96%"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span></span></span>
-            <span class="review-row__count">120 reviews</span>
-            <span class="review-row__arrow" aria-hidden="true">&rarr;</span>
-            <span class="sr-only">4.8 out of 5 stars on Yelp from 120 reviews (opens in a new tab)</span>
-          </a>
-          <p class="reviews-card__note">Ratings as of October 2026</p>
-        </aside>
+        <div class="about-hero__side">
+          <aside class="reviews-card" aria-label="Customer reviews">
+            <p class="reviews-card__label">What families say</p>
+            <a class="review-row" href="https://www.google.com/maps/place/?q=place_id:ChIJy8OUKBAxjoARg9V0BIQ25QE" target="_blank" rel="noopener">
+              <span class="review-row__source"><img src="media/google-logo.png" alt="Google" width="194" height="64"></span>
+              <span class="review-row__score"><span class="review-row__num">5.0</span><span class="stars" aria-hidden="true"><span class="stars__base"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="stars__fill" style="width:100%"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span></span></span>
+              <span class="review-row__count">57 reviews</span>
+              <span class="review-row__arrow" aria-hidden="true">&rarr;</span>
+              <span class="sr-only">5.0 out of 5 stars on Google from 57 reviews (opens in a new tab)</span>
+            </a>
+            <a class="review-row" href="https://www.yelp.com/biz/economic-driving-school-san-jose" target="_blank" rel="noopener">
+              <span class="review-row__source"><img src="media/yelp-logo.png" alt="Yelp" width="170" height="64"></span>
+              <span class="review-row__score"><span class="review-row__num">4.8</span><span class="stars" aria-hidden="true"><span class="stars__base"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="stars__fill" style="width:96%"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span></span></span>
+              <span class="review-row__count">120 reviews</span>
+              <span class="review-row__arrow" aria-hidden="true">&rarr;</span>
+              <span class="sr-only">4.8 out of 5 stars on Yelp from 120 reviews (opens in a new tab)</span>
+            </a>
+            <p class="reviews-card__note">Ratings as of October 2026</p>
+          </aside>
+          <figure class="hero-photo">
+            <img src="media/meyer-family.jpg" alt="The Meyer family, owners of Economic Driving School" width="1100" height="867">
+            <figcaption>The Meyer family</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -1048,25 +1061,6 @@ body { background: var(--page-bg); }
         <div class="fact"><span class="fact__num">200,000+</span><span class="fact__label">Californians helped to get their license</span></div>
         <div class="fact"><span class="fact__num">#2430</span><span class="fact__label">California DMV license</span></div>
         <div class="fact"><span class="fact__num">San Jose</span><span class="fact__label">Proudly local</span></div>
-      </div>
-    </section>
-
-    <!-- ===== Our story ===== -->
-    <section class="section section--story" aria-labelledby="story-title">
-      <div class="container story">
-        <div class="story__copy">
-          <p class="eyebrow"><span class="eyebrow__bar" aria-hidden="true"></span>Our story</p>
-          <h2 class="h2" id="story-title">Teaching San Jose to drive since 1978</h2>
-          <p class="about-text">Economic Driving School started in 1978 with a simple goal: give new drivers great training at a fair price. Forty-eight years later, that goal hasn&rsquo;t changed, and neither has the family behind it.</p>
-          <p class="about-text">Founded and still run by Donald Meyer, we&rsquo;ve helped more than 200,000 Californians earn their permits and licenses.</p>
-          <p class="about-text">We started with classroom Driver Education. Today students can also take our DMV-approved course online, at their own pace on any device, then build real-road skills one-on-one with our licensed instructors, including credentialed Special Education teachers.</p>
-          <p class="about-text">We&rsquo;re a local business, and we give back like one: 40% of every registration made with a school code goes back to local schools and community centers.</p>
-          <p class="story__tagline">Family owned. San Jose proud. 48 years and counting.</p>
-        </div>
-        <figure class="story__photo">
-          <img src="media/meyer-family.jpg" alt="The Meyer family, owners of Economic Driving School" width="1100" height="867" loading="lazy">
-          <figcaption>The Meyer family</figcaption>
-        </figure>
       </div>
     </section>
 
