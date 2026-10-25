@@ -904,8 +904,9 @@ body { background: var(--page-bg); }
 .header__inner { max-width: 1440px; }
 .logo { flex-shrink: 0; }
 .logo__sub { white-space: nowrap; }
-@media (max-width: 1720px) { .header__login { display: none; } }
-@media (max-width: 1440px) and (min-width: 1281px) { .nav { gap: 22px; font-size: 15px; } }
+@media (max-width: 1880px) { .header__login { display: none; } }
+@media (max-width: 1440px) and (min-width: 1281px) { .nav { gap: 16px; font-size: 14.5px; } }
+@media (max-width: 1500px) and (min-width: 1441px) { .nav { gap: 22px; } }
 </style>
 </head>
 <body>
@@ -947,6 +948,7 @@ body { background: var(--page-bg); }
         <a href="http://comedyschoolonline.com/referrals.php?refid=MjEw">Online Traffic School</a>
         <a href="practice-written-tests.html">Practice Tests</a>
         <a href="faq.html">FAQ</a>
+        <a href="about.html" aria-current="page">About Us</a>
         <a href="contact-us.html">Contact</a>
         <a class="nav__mobile-only" href="https://course.economicdrivingschool.com/course/candidate_login.php">Student Login</a>
       </nav>
@@ -992,25 +994,6 @@ body { background: var(--page-bg); }
       </div>
     </section>
 
-    <!-- ===== Programs ===== -->
-    <section class="section section--grey">
-      <div class="container">
-        <div class="section-head section-head--split">
-          <div>
-            <p class="eyebrow">What we offer</p>
-            <h2 class="h2">A complete range of courses</h2>
-          </div>
-          <p class="section-head__lead">As one of the foremost driving schools in California, we offer everything from a student's first permit to refresher courses for experienced drivers.</p>
-        </div>
-        <div class="resources resources--white resources--four">
-          <a class="resource" href="online-driver-education.html">Online Driver Education<span aria-hidden="true">→</span></a>
-          <a class="resource" href="behind-the-wheel.html">Behind-the-Wheel Driver Training<span aria-hidden="true">→</span></a>
-          <a class="resource" href="mature-driver-course.html">Mature Driver Course<span aria-hidden="true">→</span></a>
-          <a class="resource" href="http://comedyschoolonline.com/referrals.php?refid=MjEw">Online Traffic School<span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== Community ===== -->
     <section class="section">
       <div class="container">
@@ -1043,6 +1026,25 @@ body { background: var(--page-bg); }
             <img class="partner__logo" src="data:image/webp;base64,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" alt="The Harker School logo">
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ===== Programs ===== -->
+    <section class="section section--grey">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">What we offer</p>
+            <h2 class="h2">A complete range of courses</h2>
+          </div>
+          <p class="section-head__lead">As one of the foremost driving schools in California, we offer everything from a student's first permit to refresher courses for experienced drivers.</p>
+        </div>
+        <div class="resources resources--white resources--four">
+          <a class="resource" href="online-driver-education.html">Online Driver Education<span aria-hidden="true">→</span></a>
+          <a class="resource" href="behind-the-wheel.html">Behind-the-Wheel Driver Training<span aria-hidden="true">→</span></a>
+          <a class="resource" href="mature-driver-course.html">Mature Driver Course<span aria-hidden="true">→</span></a>
+          <a class="resource" href="http://comedyschoolonline.com/referrals.php?refid=MjEw">Online Traffic School<span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
 
