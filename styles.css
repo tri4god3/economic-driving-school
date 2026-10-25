@@ -119,7 +119,7 @@ address { font-style: normal; }
 
 /* ---------- Top bar ---------- */
 .topbar { background: var(--black); color: var(--grey-300); font-size: 14px; }
-.topbar__inner { min-height: 40px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.topbar__inner { min-height: 40px; display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
 .topbar__group { display: flex; align-items: center; gap: 24px; }
 .topbar__divider { color: var(--grey-700); }
 .topbar a { color: var(--grey-300); }
