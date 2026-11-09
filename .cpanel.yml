@@ -15,6 +15,7 @@ deployment:
     - /bin/cp -f online-driver-education.html $DEPLOYPATH
     - /bin/cp -f permit-req.html $DEPLOYPATH
     - /bin/cp -f practice-written-tests.html $DEPLOYPATH
+    - /bin/cp -f traffic-school.html $DEPLOYPATH
     - /bin/cp -f 404.html $DEPLOYPATH
     - /bin/cp -f styles.css $DEPLOYPATH
     - /bin/cp -Rf media $DEPLOYPATH
